@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <h1>Have a thought to share?</h1>
+    <p>Pour them and let the world know what's on your mind 💫</p>
+
+    <form action="/submit" method="post">
+        <input type="text" name="topic" placeholder="Topic" required>
+        <textarea name="content" placeholder="Your thought..." required></textarea>
+        <input type="submit" value="Share">
+    </form>
+</main>
+
+<%- include("partials/footer.ejs") %>
