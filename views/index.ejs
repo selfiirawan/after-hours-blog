@@ -4,9 +4,12 @@
     <h1>AfterHours 🌙</h1>
     <p>A spot to pour your late-night thoughts, ideas, or just to share your day.</p>
 
-    <h2>Posted Stories</h2>
+    <h2>Shared Thoughts</h2>
     <!-- Loop through posted stories and display them  -->
-    
+    <% posts.forEach(function(post) { %>
+        <h3><%= post.topic %></h3>
+        <p><%= post.content %></p>
+    <% }) %>
 </main>
 
 <%- include("partials/footer.ejs") %>
