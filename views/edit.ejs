@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <form action="/edit/<%= post.id %>" method="post">
+        <input type="text" name="topic" value="<%= post.topic %>" required>
+        <textarea name="content" required><%= post.content %></textarea>
+        <button type="submit">Confirm</button>
+    </form>
+</main>
+
+<%- include("partials/footer.ejs") %>

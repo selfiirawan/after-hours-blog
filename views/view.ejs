@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <a href="/">&larr; Back to Home</a>
+    <h1><%= post.topic %></h1>
+    <p><%= post.content %></p>
+
+    <form action="/edit/<%= post.id %>" method="get" style="display: inline;">
+        <button type="submit">Edit</button>
+    </form>
+
+    <form action="/delete/<%= post.id %>" method="post" style="display: inline;">
+        <button type="submit">Delete</button>
+    </form>
+</main>
+
+<%- include("partials/footer.ejs") %>
+
