@@ -2,5 +2,9 @@ body {
     min-height: 100vh;
     background-image: linear-gradient(to bottom, #0E0828 21%, #5D4AB1 50%, #311C8E 100%);
     color: #fff;
+    font-family: "Playfair", serif;
 }
 
+.navbar {
+    font-size: 20px;
+}
