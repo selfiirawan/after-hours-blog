@@ -1,10 +1,11 @@
 <%- include("partials/header.ejs") %>
 
 <main>
-    <form action="/edit/<%= post.id %>" method="post">
+    <form action="/edit/<%= post.slug %>" method="post">
         <input type="text" name="topic" value="<%= post.topic %>" required>
         <textarea name="content" required><%= post.content %></textarea>
         <button type="submit">Confirm</button>
+        <button type="button" onclick="window.location.href='/view/<%= post.slug %>'">Cancel</button>
     </form>
 </main>
 
