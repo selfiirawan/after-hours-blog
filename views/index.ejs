@@ -1,10 +1,14 @@
 <%- include("partials/header.ejs") %>
 
 <main>
-    <h1>AfterHours 🌙</h1>
-    <p>A spot to pour your late-night thoughts, ideas, or just to share your day.</p>
+    <!-- Hero -->
+    <div class="px-4 py-4 my-5 text-center hero"> 
+        <h1 class="display-5">Thoughtful. Quiet. Yours.</h1> 
+        <div class="col-lg-6 mx-auto py-3"> 
+            <p class="lead mb-4">Say what you've been holding in.</p>
+        </div> 
+    </div>
 
-    <h2>Shared Thoughts</h2>
     <!-- Loop through posted stories and display them  -->
     <% posts.forEach(function(post) { %>
         <div>

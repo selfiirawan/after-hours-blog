@@ -8,3 +8,13 @@ body {
 .navbar {
     font-size: 20px;
 }
+
+/* Home  */
+.hero {
+    font-family: "Luxurious Roman", serif;
+}
+
+.hero > h1 {
+    font-size: 3.5rem;
+}
+
