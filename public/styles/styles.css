@@ -1,5 +1,4 @@
 body {
-    min-height: 100vh;
     background-image: linear-gradient(to bottom, #0E0828 21%, #5D4AB1 50%, #311C8E 100%);
     color: #fff;
     font-family: "Playfair", serif;
@@ -18,3 +17,26 @@ body {
     font-size: 3.5rem;
 }
 
+.hero > div > p {
+    font-size: 18px;
+}
+
+.card {
+    max-height: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}

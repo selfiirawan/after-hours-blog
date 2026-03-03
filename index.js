@@ -72,7 +72,8 @@ app.post("/submit", (req, res) => {
     const newPost = {
         topic: topic,
         content: content, 
-        slug: slugify(topic, { lower: true, strict: true })
+        slug: slugify(topic, { lower: true, strict: true }),
+        createdAt: new Date()
     }
 
     posts.push(newPost);

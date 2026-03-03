@@ -1,22 +1,46 @@
 <%- include("partials/header.ejs") %>
 
-<main>
+<main class="flex-fill">
     <!-- Hero -->
-    <div class="px-4 py-4 my-5 text-center hero"> 
+    <div class="px-4 py-4 my-4 text-center hero"> 
         <h1 class="display-5">Thoughtful. Quiet. Yours.</h1> 
         <div class="col-lg-6 mx-auto py-3"> 
-            <p class="lead mb-4">Say what you've been holding in.</p>
+            <p class="mb-4">Say what you've been holding in.</p>
         </div> 
     </div>
 
-    <!-- Loop through posted stories and display them  -->
-    <% posts.forEach(function(post) { %>
-        <div>
-            <h3><%= post.topic %></h3>
-            <p><%= post.content %></p>
-            <a href="/view/<%= post.slug %>" >Read more</a>
+
+    <!-- Content -->
+
+    <% if (posts.length === 0) { %>
+        <div class="text-center text-white-50 py-5">
+            <h4>No posts yet</h4>
+            <p class="mt-2">Start writing your first reflection ✨</p>
         </div>
-    <% }) %>
+    <% } else { %>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mx-3">
+            <% posts.forEach(function(post) { %>
+                <div class="col">
+                    <div class="card h-100 bg-transparent border-white border-2 rounded-4 shadow-lg text-white">
+                        <div class="card-body px-4 d-flex flex-column">
+                            <h4 class="card-title py-2 fw-bold"><%= post.topic %></h4>
+                            <p class="card-text lh-sm"><%= post.content %></p>
+
+                            <div class="mt-auto d-flex justify-content-between align-items-center pt-3">
+                                <small><%= post.createdAt.toLocaleDateString("en-MY", {
+                                            day: "numeric",
+                                            month: "short",
+                                            year: "numeric"
+                                        }) %>
+                                </small>
+                                <a href="/view/<%= post.slug %>" class="btn btn-outline-light btn-sm rounded-4">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
 </main>
 
 <%- include("partials/footer.ejs") %>
