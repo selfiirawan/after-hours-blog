@@ -9,11 +9,11 @@ body {
 }
 
 /* Home  */
-.hero {
+.hero, .about {
     font-family: "Luxurious Roman", serif;
 }
 
-.hero > h1 {
+h1 {
     font-size: 3.5rem;
 }
 
@@ -40,3 +40,4 @@ body {
   box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.6);
 }
+
