@@ -41,3 +41,33 @@ h1 {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
+/* ABOUT */
+.about-text {
+    font-size: 20px;
+}
+
+.about > h1 {
+    font-size: 4rem;
+}
+
+.form-control::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.form-control {
+    height: 60px;
+}
+
+.post-button {
+    width: 100px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.post-button:hover {
+    background-color: #000;
+    color: #fff;
+}

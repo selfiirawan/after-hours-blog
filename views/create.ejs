@@ -1,14 +1,30 @@
 <%- include("partials/header.ejs") %>
 
-<main>
-    <h1>Any thoughts tonight?</h1>
-    <p>Pour them out and let the world know what's on your mind 💫</p>
+<main class="flex-fill">
 
-    <form action="/submit" method="post">
-        <input type="text" name="topic" placeholder="Topic" required>
-        <textarea name="content" placeholder="Your thought..." required></textarea>
-        <input type="submit" value="Post">
+    <!-- Bootstrap -->
+    <div class="px-4 py-4 my-4 text-center hero"> 
+        <h1 class="display-5">Let it out</h1> 
+        <div class="col-lg-6 mx-auto py-3"> 
+            <p class="mb-3">This is your space. Take your time.</p>
+        </div> 
+    </div>
+
+    <!-- Form -->
+    <form action="/submit" method="post" class="mx-4 mx-md-auto my-4 p-4 border rounded-4 bg-transparent border-white border-2 shadow-lg" style="max-width: 700px;">
+        <div class="mx-3">
+            <div class="mt-4 mb-4">
+                <input type="text" name="topic" class="form-control border rounded-4 bg-transparent text-white border-2" id="floatingInput" placeholder="What is this about?" required>
+            </div>
+            <div class="mb-4">
+                <textarea name="content" class="form-control border rounded-4 bg-transparent text-white border-2" placeholder="Write freely. No filters needed..." id="exampleFormControlTextarea1" rows="3" style="height: 130px" required></textarea>
+            </div>
+            <div class="text-center mt-5">
+                <input type="submit" class="btn btn-outline-light rounded-4 post-button" value="Post">
+            </div>
+        </div>
     </form>
+
 </main>
 
 <%- include("partials/footer.ejs") %>
