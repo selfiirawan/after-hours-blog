@@ -9,7 +9,7 @@ body {
 }
 
 /* Home  */
-.hero, .about {
+.hero, .about, .view {
     font-family: "Luxurious Roman", serif;
 }
 
@@ -70,4 +70,25 @@ h1 {
 .post-button:hover {
     background-color: #000;
     color: #fff;
+}
+
+/* VIEW */
+.edit-button {
+    background-color: #fff;
+    color: #000;
+}
+
+.edit-button:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.content-box {
+    max-width: 700px;
+    min-height: 500px;
+}
+
+.view-text {
+    text-align: justify;
 }
