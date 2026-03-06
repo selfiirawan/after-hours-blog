@@ -13,11 +13,20 @@
     <!-- Form -->
     <form action="/submit" method="post" class="mx-4 mx-md-auto my-4 p-4 border rounded-4 bg-transparent border-white border-2 shadow-lg" style="max-width: 700px;">
         <div class="mx-3">
+
+            <!-- if duplicate exist -->
+            <% if (error) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            
+            <!-- Proceed if no duplicate -->
             <div class="mt-4 mb-4">
-                <input type="text" name="topic" class="form-control border rounded-4 bg-transparent text-white border-2" id="floatingInput" placeholder="What is this about?" required>
+                <input type="text" name="topic" class="form-control border rounded-4 bg-transparent text-white border-2" id="floatingInput" placeholder="What is this about?" value="<%= topic || '' %>" required>
             </div>
             <div class="mb-4">
-                <textarea name="content" class="form-control border rounded-4 bg-transparent text-white border-2" placeholder="Write freely. No filters needed..." id="exampleFormControlTextarea1" rows="3" style="height: 130px" required></textarea>
+                <textarea name="content" class="form-control border rounded-4 bg-transparent text-white border-2" placeholder="Write freely. No filters needed..." id="exampleFormControlTextarea1" rows="3" style="height: 130px" required><%= content || '' %></textarea>
             </div>
             <div class="text-center mt-5">
                 <input type="submit" class="btn btn-outline-light rounded-3 post-button" value="Post">

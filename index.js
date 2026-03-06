@@ -25,7 +25,11 @@ app.get("/about", (req, res) => {
 
 // CREATE 
 app.get("/create", (req, res) => {
-    res.render("create.ejs");
+    res.render("create.ejs", {
+        error: null,
+        topic: '',
+        content: ''
+    });
 })
 
 // VIEW FULL POST 
@@ -68,7 +72,19 @@ app.post("/delete/:slug", (req, res) => {
 app.post("/submit", (req, res) => {
     const topic = req.body.topic;
     const content = req.body.content;
+
+    // check for duplicate topic 
+    const duplicate = posts.find(p => p.topic.toLowerCase() === topic.toLowerCase());
+
+    if (duplicate) {
+        return res.render("create.ejs", {
+            error: "A post with this topic already exists. Please choose a different topic.",
+            topic: topic,
+            content: content
+        });
+    }
     
+    // If no duplicate, create new post
     const newPost = {
         topic: topic,
         content: content, 
