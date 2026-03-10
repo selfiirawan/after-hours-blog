@@ -22,14 +22,17 @@
 
 ## 📸 Screenshots
 
-### Homepage  
-![Homepage](https://via.placeholder.com/800x400?text=Homepage+Screenshot)
+### Homepage and Create Post 
+<p align="center">
+  <img src="screenshots/homepage.png" width="45%">
+  <img src="screenshots/create.png" width="45%">
+</p>
 
-### Create Post Page  
-![Create Post](https://via.placeholder.com/800x400?text=Create+Post+Screenshot)
-
-### View Post Page  
-![View Post](https://via.placeholder.com/800x400?text=View+Post+Screenshot)
+### View Post and Edit Post
+<p align="center">
+  <img src="screenshots/view.png" width="45%">
+  <img src="screenshots/edit.png" width="45%">
+</p>
 
 ## ✨ Live Demo 
 [Visit AfterHours Live](https://after-hours-blog.onrender.com/)  
